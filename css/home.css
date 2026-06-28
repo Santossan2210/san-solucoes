@@ -1,0 +1,364 @@
+/*
+  San Soluções e Negócios - Estilos da Home (home.css)
+  ======================================================
+  Conceitos: background gradients, canvas, CSS Grid/Flex,
+  animações keyframe, clip-path, counter animation
+  Possibilidades de melhoria: animação de partículas com JS, animação de contadores com JS
+*/
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #071528 0%, #0B1F3A 50%, #132B50 100%);
+  color: var(--clr-white);
+  text-align: center;
+}
+
+/* Canvas de partículas cobre o fundo */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+#particles-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px; /* compensar o header fixo */
+}
+
+/* Eyebrow */
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: 100px;
+  margin-bottom: 1.75rem;
+}
+
+/* Título principal */
+.hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--clr-white);
+}
+
+/* Palavra de destaque com gradiente dourado */
+.hero-highlight {
+  background: linear-gradient(90deg, #F59E0B, #FCD34D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255,255,255,0.75);
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+/* Estatísticas */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 2.5rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: inline;
+  font-family: var(--ff-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--clr-white);
+}
+
+.stat-plus {
+  font-size: 1.8rem;
+  color: var(--clr-gold);
+  font-weight: 700;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.15);
+}
+
+/* Seta de rolagem */
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  color: var(--clr-white);
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.scroll-indicator:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(-50%) translateY(4px);
+}
+
+/* Seta animada com keyframe */
+.scroll-arrow {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--clr-white);
+  border-bottom: 2px solid var(--clr-white);
+  transform: rotate(45deg) translate(-2px, -2px);
+  animation: bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: rotate(45deg) translate(-2px, -2px); opacity: 0.6; }
+  50%       { transform: rotate(45deg) translate(2px, 2px);  opacity: 1; }
+}
+
+/* ===== DIFERENCIAIS ===== */
+.diferenciais {
+  background-color: var(--clr-off-wh);
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.diferencial-card {
+  background: var(--clr-white);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--clr-gray-1);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.diferencial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--clr-blue);
+}
+
+.card-icon svg { width: 24px; height: 24px; }
+
+.diferencial-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--clr-navy);
+  margin-bottom: 0.6rem;
+}
+
+.diferencial-card p {
+  font-size: 0.9rem;
+  color: var(--clr-gray-3);
+  line-height: 1.65;
+}
+
+/* ===== SERVIÇOS (PRÉVIA) ===== */
+.servicos-preview {
+  background-color: var(--clr-navy);
+}
+
+.servicos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: var(--space-lg);
+}
+
+.servico-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: var(--clr-white);
+  text-decoration: none;
+  transition: padding-left var(--transition);
+  cursor: pointer;
+}
+
+.servico-item:hover {
+  padding-left: 0.75rem;
+}
+
+.servico-item:hover .servico-arrow {
+  transform: translateX(8px);
+}
+
+.servico-num {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.2);
+  min-width: 40px;
+  font-weight: 700;
+}
+
+.servico-info { flex: 1; }
+
+.servico-info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--clr-white);
+}
+
+.servico-info p {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.55);
+}
+
+.servico-arrow {
+  font-size: 1.5rem;
+  color: var(--clr-gold);
+  transition: transform var(--transition);
+  min-width: 24px;
+}
+
+.servicos-cta { text-align: center; }
+
+/* ===== CTA ===== */
+.cta-section {
+  background: var(--clr-off-wh);
+  padding: var(--space-lg) 0;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--clr-blue), #1648c0);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  color: var(--clr-white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Círculo decorativo no cta */
+.cta-box::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+}
+
+.cta-box::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -40px;
+  width: 280px;
+  height: 280px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+
+.cta-box h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-box p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 2rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-box .btn-primary {
+  background: var(--clr-white);
+  color: var(--clr-blue);
+  border-color: var(--clr-white);
+  position: relative;
+  z-index: 1;
+}
+
+.cta-box .btn-primary:hover {
+  background: var(--clr-off-wh);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 640px) {
+  .hero-stats { gap: 1.25rem; }
+  .stat-divider { display: none; }
+  .servico-item { flex-wrap: wrap; gap: 1rem; }
+  .servico-num { display: none; }
+}

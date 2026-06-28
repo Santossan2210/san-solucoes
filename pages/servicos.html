@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--
+  San Soluções e Negócios - Serviços (servicos.html)
+  Página detalhando todos os serviços oferecidos
+-->
+<html lang="pt-BR">
+<head>
+  <!-- SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça os serviços da San Soluções: consultoria estratégica, atendimento setorial, capacitação, transparência e melhoria contínua.">
+  <meta name="keywords" content="serviços de consultoria, gestão empresarial, capacitação, melhoria contínua, atendimento setorial">
+  <meta name="robots" content="index, follow">
+  <title>Serviços | San Soluções e Negócios</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="site-header scrolled" id="site-header">
+    <nav class="navbar container" role="navigation" aria-label="Navegação principal">
+      <a class="navbar-logo" href="../index.html" aria-label="San Soluções e Negócios - Início">
+        <span class="logo-icon">S</span>
+        <span class="logo-text">San <strong>Soluções</strong></span>
+      </a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+        <li><a href="servicos.html" class="nav-link active" aria-current="page">Serviços</a></li>
+        <li><a href="contato.html" class="nav-link">Contato</a></li>
+      </ul>
+      <a href="contato.html" class="btn-nav-cta">Fale Conosco</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO INTERNO -->
+    <section class="page-hero" aria-label="Nossos Serviços">
+      <div class="container">
+        <div class="page-hero-content">
+          <span class="section-eyebrow">O que oferecemos</span>
+          <h1 class="page-hero-title">Nossos Serviços</h1>
+          <p class="page-hero-desc">Soluções completas para cada etapa do crescimento do seu negócio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LISTA DE SERVIÇOS -->
+    <section class="servicos-detalhe" aria-labelledby="servicos-title">
+      <div class="container">
+        <!-- Serviço 1 -->
+        <article class="servico-detalhe-item" id="consultoria" data-reveal>
+          <div class="servico-detalhe-num" aria-hidden="true">01</div>
+          <div class="servico-detalhe-content">
+            <div class="servico-detalhe-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h2>Consultoria Estratégica</h2>
+            <p>Auxiliamos as empresas na definição e alcance de seus objetivos por meio de estratégias eficazes. Desenvolvemos diagnósticos completos do negócio, mapeamos oportunidades e riscos, e co-criamos planos de ação com metas mensuráveis.</p>
+            <ul class="servico-lista">
+              <li>Diagnóstico organizacional</li>
+              <li>Planejamento estratégico</li>
+              <li>Gestão de mudanças</li>
+              <li>Indicadores de desempenho (KPIs)</li>
+            </ul>
+            <a href="contato.html" class="btn btn-primary">Saiba Mais</a>
+          </div>
+        </article>
+
+        <div class="servico-divider" aria-hidden="true"></div>
+
+        <!-- Serviço 2 -->
+        <article class="servico-detalhe-item servico-detalhe-item--reverse" id="setorial" data-reveal>
+          <div class="servico-detalhe-num" aria-hidden="true">02</div>
+          <div class="servico-detalhe-content">
+            <div class="servico-detalhe-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <h2>Atendimento Setorial</h2>
+            <p>Atendemos diversos setores industriais, adaptando soluções específicas para cada necessidade. Nossa expertise abrange desde o varejo até a indústria pesada, sempre com abordagens personalizadas e contextualizada para cada segmento.</p>
+            <ul class="servico-lista">
+              <li>Varejo e Comércio</li>
+              <li>Indústria e Manufatura</li>
+              <li>Serviços e Tecnologia</li>
+              <li>Agronegócio</li>
+            </ul>
+            <a href="contato.html" class="btn btn-primary">Saiba Mais</a>
+          </div>
+        </article>
+
+        <div class="servico-divider" aria-hidden="true"></div>
+
+        <!-- Serviço 3 -->
+        <article class="servico-detalhe-item" id="capacitacao" data-reveal>
+          <div class="servico-detalhe-num" aria-hidden="true">03</div>
+          <div class="servico-detalhe-content">
+            <div class="servico-detalhe-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                <path d="M12 14l6.16-3.422A12 12 0 0 1 22 15.5V21M12 14l-6.16-3.422A12 12 0 0 0 2 15.5V21"/>
+                <path d="M12 22v-8"/>
+              </svg>
+            </div>
+            <h2>Capacitação e Desenvolvimento</h2>
+            <p>Criamos treinamentos personalizados para aprimorar habilidades e competências de equipes e líderes. Nossa metodologia une teoria e prática, garantindo que o conhecimento seja aplicado imediatamente no dia a dia da sua empresa.</p>
+            <ul class="servico-lista">
+              <li>Treinamentos presenciais e online</li>
+              <li>Desenvolvimento de lideranças</li>
+              <li>Cultura organizacional</li>
+              <li>Programas de mentoria</li>
+            </ul>
+            <a href="contato.html" class="btn btn-primary">Saiba Mais</a>
+          </div>
+        </article>
+
+        <div class="servico-divider" aria-hidden="true"></div>
+
+        <!-- Serviço 4 -->
+        <article class="servico-detalhe-item servico-detalhe-item--reverse" id="transparencia" data-reveal>
+          <div class="servico-detalhe-num" aria-hidden="true">04</div>
+          <div class="servico-detalhe-content">
+            <div class="servico-detalhe-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h2>Transparência e Comunicação</h2>
+            <p>Buscamos modelos de gestão que permitam aos nossos clientes e parceiros entenderem todos os processos e alcançarem resultados sólidos. A comunicação clara e objetiva é nossa base para construir relações de confiança duradouras.</p>
+            <ul class="servico-lista">
+              <li>Relatórios gerenciais periódicos</li>
+              <li>Reuniões de alinhamento</li>
+              <li>Dashboards de acompanhamento</li>
+              <li>Comunicação interna estruturada</li>
+            </ul>
+            <a href="contato.html" class="btn btn-primary">Saiba Mais</a>
+          </div>
+        </article>
+
+        <div class="servico-divider" aria-hidden="true"></div>
+
+        <!-- Serviço 5 -->
+        <article class="servico-detalhe-item" id="melhoria" data-reveal>
+          <div class="servico-detalhe-num" aria-hidden="true">05</div>
+          <div class="servico-detalhe-content">
+            <div class="servico-detalhe-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <h2>Melhoria Contínua</h2>
+            <p>Acreditamos na evolução constante e trabalhamos juntos com você para alcançar seus objetivos com rigor e método. Utilizamos metodologias consagradas como PDCA, Lean e Six Sigma para garantir melhorias sustentáveis nos seus processos.</p>
+            <ul class="servico-lista">
+              <li>Metodologia PDCA</li>
+              <li>Lean Management</li>
+              <li>Eliminação de desperdícios</li>
+              <li>Gestão por processos</li>
+            </ul>
+            <a href="contato.html" class="btn btn-primary">Saiba Mais</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-simples" aria-labelledby="cta-serv-title">
+      <div class="container">
+        <div class="cta-simples-inner" data-reveal>
+          <h2 id="cta-serv-title">Precisa de uma solução personalizada?</h2>
+          <p>Entre em contato e vamos conversar sobre como podemos ajudar o seu negócio.</p>
+          <a href="contato.html" class="btn btn-primary btn--large">Falar com um Especialista</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="navbar-logo" href="../index.html">
+            <span class="logo-icon">S</span>
+            <span class="logo-text">San <strong>Soluções</strong></span>
+          </a>
+          <p>Transformar desafios em oportunidades é o que nos move.</p>
+        </div>
+        <nav aria-label="Links rápidos">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <address>
+            <p><a href="mailto:santossan2210@gmail.com">santossan2210@gmail.com</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> San Soluções e Negócios. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+</body>
+</html>

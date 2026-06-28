@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--
+  San Soluções e Negócios - Website
+  Página: Home (index.html)
+  Desenvolvido com HTML5, CSS3 e JavaScript puro
+  Projeto acadêmico - Programação Front-End
+-->
+<html lang="pt-BR">
+<head>
+  <!-- ===== META TAGS - SEO Básico ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="San Soluções e Negócios - Consultoria estratégica e gestão comercial com mais de duas décadas de experiência no mercado.">
+  <meta name="keywords" content="consultoria, gestão comercial, negócios, estratégia, capacitação, BH, Minas Gerais">
+  <meta name="author" content="San Soluções e Negócios">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph para redes sociais -->
+  <meta property="og:title" content="San Soluções e Negócios - Consultoria Estratégica">
+  <meta property="og:description" content="Transformar desafios em oportunidades é o que nos move.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sansolucoesenegocios.com.br">
+
+  <title>San Soluções e Negócios | Consultoria e Gestão Comercial</title>
+
+  <!-- Fontes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO / NAVEGAÇÃO ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar container" role="navigation" aria-label="Navegação principal">
+      <!-- Logo -->
+      <a class="navbar-logo" href="index.html" aria-label="San Soluções e Negócios - Início">
+        <span class="logo-icon">S</span>
+        <span class="logo-text">San <strong>Soluções</strong></span>
+      </a>
+
+      <!-- Links de navegação (desktop) -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+        <li><a href="pages/sobre.html" class="nav-link">Sobre Nós</a></li>
+        <li><a href="pages/servicos.html" class="nav-link">Serviços</a></li>
+        <li><a href="pages/contato.html" class="nav-link">Contato</a></li>
+      </ul>
+
+      <!-- CTA no nav -->
+      <a href="pages/contato.html" class="btn-nav-cta">Fale Conosco</a>
+
+      <!-- Botão hamburguer (mobile) -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== SEÇÃO HERO ===== -->
+  <main>
+    <section class="hero" id="hero" aria-label="Apresentação da empresa">
+      <div class="hero-bg" aria-hidden="true">
+        <!-- Partículas decorativas animadas via JS -->
+        <canvas id="particles-canvas"></canvas>
+      </div>
+
+      <div class="hero-content container">
+        <!-- Tag de destaque -->
+        <span class="hero-eyebrow">Consultoria &amp; Gestão Comercial</span>
+
+        <h1 class="hero-title">
+          Transformamos<br>
+          <span class="hero-highlight">desafios</span> em<br>
+          oportunidades
+        </h1>
+
+        <p class="hero-subtitle">
+          Mais de duas décadas de experiência impulsionando empresas com soluções inteligentes, personalizadas e sustentáveis.
+        </p>
+
+        <div class="hero-actions">
+          <a href="pages/servicos.html" class="btn btn-primary">Nossos Serviços</a>
+          <a href="pages/sobre.html" class="btn btn-outline">Quem Somos</a>
+        </div>
+
+        <!-- Indicadores numéricos -->
+        <div class="hero-stats" aria-label="Números da empresa">
+          <div class="stat-item">
+            <span class="stat-number" data-target="20">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Anos de Experiência</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="150">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Clientes Atendidos</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label">Setores de Atuação</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Seta de rolagem -->
+      <a href="#diferenciais" class="scroll-indicator" aria-label="Rolar para baixo">
+        <span class="scroll-arrow"></span>
+      </a>
+    </section>
+
+    <!-- ===== SEÇÃO DIFERENCIAIS ===== -->
+    <section class="diferenciais" id="diferenciais" aria-labelledby="diferenciais-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Por que nos escolher</span>
+          <h2 class="section-title" id="diferenciais-title">Nossos Diferenciais</h2>
+        </div>
+
+        <div class="diferenciais-grid">
+          <!-- Card 1 -->
+          <article class="diferencial-card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h3>Estratégia Personalizada</h3>
+            <p>Cada empresa é única. Desenvolvemos planos sob medida para os seus desafios e objetivos específicos.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="diferencial-card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3>Resultados Mensuráveis</h3>
+            <p>Definimos metas claras e acompanhamos cada etapa com indicadores de performance reais.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="diferencial-card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3>Equipe Especializada</h3>
+            <p>Profissionais com décadas de experiência em diferentes setores, prontos para entregar excelência.</p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="diferencial-card" data-reveal>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 11 12 14 22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            <h3>Transparência Total</h3>
+            <p>Comunicação clara e processos abertos para que você acompanhe cada decisão e resultado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO SERVIÇOS (prévia) ===== -->
+    <section class="servicos-preview" aria-labelledby="servicos-title">
+      <div class="container">
+        <div class="section-header section-header--light">
+          <span class="section-eyebrow section-eyebrow--light">O que oferecemos</span>
+          <h2 class="section-title section-title--light" id="servicos-title">Áreas de Atuação</h2>
+        </div>
+
+        <div class="servicos-list">
+          <a href="pages/servicos.html#consultoria" class="servico-item" data-reveal>
+            <span class="servico-num" aria-hidden="true">01</span>
+            <div class="servico-info">
+              <h3>Consultoria Estratégica</h3>
+              <p>Definição e alcance de objetivos por meio de estratégias eficazes e personalizadas.</p>
+            </div>
+            <span class="servico-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="pages/servicos.html#setorial" class="servico-item" data-reveal>
+            <span class="servico-num" aria-hidden="true">02</span>
+            <div class="servico-info">
+              <h3>Atendimento Setorial</h3>
+              <p>Soluções adaptadas para diferentes setores industriais e de serviços.</p>
+            </div>
+            <span class="servico-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="pages/servicos.html#capacitacao" class="servico-item" data-reveal>
+            <span class="servico-num" aria-hidden="true">03</span>
+            <div class="servico-info">
+              <h3>Capacitação e Desenvolvimento</h3>
+              <p>Treinamentos personalizados para aprimorar habilidades e competências da sua equipe.</p>
+            </div>
+            <span class="servico-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="pages/servicos.html#melhoria" class="servico-item" data-reveal>
+            <span class="servico-num" aria-hidden="true">04</span>
+            <div class="servico-info">
+              <h3>Melhoria Contínua</h3>
+              <p>Evolução constante dos processos para resultados cada vez melhores e sustentáveis.</p>
+            </div>
+            <span class="servico-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="servicos-cta">
+          <a href="pages/servicos.html" class="btn btn-primary btn--large">Ver Todos os Serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO CTA ===== -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-box" data-reveal>
+          <h2 id="cta-title">Pronto para transformar seu negócio?</h2>
+          <p>Entre em contato e descubra como podemos ajudar a sua empresa a crescer de forma inteligente.</p>
+          <a href="pages/contato.html" class="btn btn-primary btn--large">Solicitar Consultoria Gratuita</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="navbar-logo" href="index.html">
+            <span class="logo-icon">S</span>
+            <span class="logo-text">San <strong>Soluções</strong></span>
+          </a>
+          <p>Transformar desafios em oportunidades é o que nos move.</p>
+        </div>
+
+        <nav aria-label="Links rápidos do rodapé">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/sobre.html">Sobre Nós</a></li>
+            <li><a href="pages/servicos.html">Serviços</a></li>
+            <li><a href="pages/contato.html">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <address>
+            <p><a href="mailto:santossan2210@gmail.com">santossan2210@gmail.com</a></p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> San Soluções e Negócios. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript -->
+  <script src="js/global.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

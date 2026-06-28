@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--
+  San Soluções e Negócios - Contato (contato.html)
+  Formulário de contato com validação via JavaScript puro
+-->
+<html lang="pt-BR">
+<head>
+  <!-- SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com a San Soluções e Negócios. Solicite uma consultoria, envie dúvidas ou peça um orçamento.">
+  <meta name="keywords" content="contato san soluções, solicitar consultoria, orçamento consultoria empresarial">
+  <meta name="robots" content="index, follow">
+  <title>Contato | San Soluções e Negócios</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <link rel="stylesheet" href="../css/contato.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="site-header scrolled" id="site-header">
+    <nav class="navbar container" role="navigation" aria-label="Navegação principal">
+      <a class="navbar-logo" href="../index.html" aria-label="San Soluções e Negócios - Início">
+        <span class="logo-icon">S</span>
+        <span class="logo-text">San <strong>Soluções</strong></span>
+      </a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+        <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+        <li><a href="contato.html" class="nav-link active" aria-current="page">Contato</a></li>
+      </ul>
+      <a href="contato.html" class="btn-nav-cta">Fale Conosco</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO INTERNO -->
+    <section class="page-hero" aria-label="Entre em Contato">
+      <div class="container">
+        <div class="page-hero-content">
+          <span class="section-eyebrow">Fale Conosco</span>
+          <h1 class="page-hero-title">Entre em Contato</h1>
+          <p class="page-hero-desc">Estamos prontos para transformar o seu próximo desafio em uma oportunidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO + INFO -->
+    <section class="contato-section" aria-labelledby="form-title">
+      <div class="container">
+        <div class="contato-grid">
+
+          <!-- Coluna de informações -->
+          <aside class="contato-info" data-reveal>
+            <div class="info-card">
+              <h2 id="info-title">Informações de Contato</h2>
+              <p>Prefere entrar em contato diretamente? Use os dados abaixo ou preencha o formulário ao lado.</p>
+
+              <div class="info-item">
+                <div class="info-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="info-label">E-mail</span>
+                  <a href="mailto:santossan2210@gmail.com" class="info-value">santossan2210@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="info-label">Localização</span>
+                  <span class="info-value">Minas Gerais, Brasil</span>
+                </div>
+              </div>
+
+              <!-- Link direto para e-mail -->
+              <a
+                href="mailto:santossan2210@gmail.com?subject=Contato%20Para%20Or%C3%A7amento%20Pelo%20Site%20sansolucoes&body=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+                class="btn btn-primary btn-email"
+              >
+                Enviar E-mail Direto
+              </a>
+            </div>
+          </aside>
+
+          <!-- Formulário com validação JavaScript -->
+          <div class="contato-form-wrap" data-reveal>
+            <h2 id="form-title">Envie sua Mensagem</h2>
+
+            <!--
+              FORMULÁRIO DE CONTATO
+              Validação: src/js/contato.js
+              Campos obrigatórios: nome, email, assunto, mensagem
+            -->
+            <form
+              id="contact-form"
+              class="contact-form"
+              novalidate
+              aria-label="Formulário de contato"
+            >
+              <!-- Nome -->
+              <div class="form-group" id="group-nome">
+                <label class="form-label" for="nome">
+                  Nome Completo <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  class="form-input"
+                  placeholder="Seu nome completo"
+                  autocomplete="name"
+                  aria-required="true"
+                  aria-describedby="erro-nome"
+                >
+                <span class="form-error" id="erro-nome" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- E-mail -->
+              <div class="form-group" id="group-email">
+                <label class="form-label" for="email">
+                  E-mail <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="seu@email.com"
+                  autocomplete="email"
+                  aria-required="true"
+                  aria-describedby="erro-email"
+                >
+                <span class="form-error" id="erro-email" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Telefone (opcional) -->
+              <div class="form-group" id="group-telefone">
+                <label class="form-label" for="telefone">
+                  Telefone / WhatsApp
+                  <span class="optional">(opcional)</span>
+                </label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  class="form-input"
+                  placeholder="(00) 00000-0000"
+                  autocomplete="tel"
+                  aria-describedby="erro-telefone"
+                >
+                <span class="form-error" id="erro-telefone" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Assunto -->
+              <div class="form-group" id="group-assunto">
+                <label class="form-label" for="assunto">
+                  Assunto <span class="required" aria-hidden="true">*</span>
+                </label>
+                <select
+                  id="assunto"
+                  name="assunto"
+                  class="form-input form-select"
+                  aria-required="true"
+                  aria-describedby="erro-assunto"
+                >
+                  <option value="">Selecione um assunto...</option>
+                  <option value="consultoria">Consultoria Estratégica</option>
+                  <option value="atendimento">Atendimento Setorial</option>
+                  <option value="capacitacao">Capacitação e Treinamento</option>
+                  <option value="melhoria">Melhoria Contínua</option>
+                  <option value="orcamento">Solicitar Orçamento</option>
+                  <option value="outro">Outro</option>
+                </select>
+                <span class="form-error" id="erro-assunto" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Mensagem -->
+              <div class="form-group form-group--full" id="group-mensagem">
+                <label class="form-label" for="mensagem">
+                  Mensagem <span class="required" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  class="form-input form-textarea"
+                  placeholder="Descreva como podemos ajudar a sua empresa..."
+                  rows="5"
+                  aria-required="true"
+                  aria-describedby="erro-mensagem erro-mensagem-count"
+                ></textarea>
+                <div class="form-meta">
+                  <span class="form-error" id="erro-mensagem" role="alert" aria-live="polite"></span>
+                  <span class="char-count" id="erro-mensagem-count" aria-live="polite">0 / 500</span>
+                </div>
+              </div>
+
+              <!-- Checkbox LGPD -->
+              <div class="form-group form-group--full form-group--checkbox" id="group-lgpd">
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    id="lgpd"
+                    name="lgpd"
+                    class="checkbox-input"
+                    aria-required="true"
+                    aria-describedby="erro-lgpd"
+                  >
+                  <span class="checkbox-custom" aria-hidden="true"></span>
+                  Concordo com o uso dos meus dados para fins de contato comercial, conforme a LGPD.
+                </label>
+                <span class="form-error" id="erro-lgpd" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Botão de envio -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn--large btn-submit" id="btn-submit">
+                  <span class="btn-text">Enviar Mensagem</span>
+                  <span class="btn-loading" aria-hidden="true" hidden>Enviando...</span>
+                </button>
+              </div>
+
+              <!-- Mensagem de sucesso/erro global -->
+              <div id="form-feedback" class="form-feedback" role="status" aria-live="polite" hidden></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="navbar-logo" href="../index.html">
+            <span class="logo-icon">S</span>
+            <span class="logo-text">San <strong>Soluções</strong></span>
+          </a>
+          <p>Transformar desafios em oportunidades é o que nos move.</p>
+        </div>
+        <nav aria-label="Links rápidos">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <address>
+            <p><a href="mailto:santossan2210@gmail.com">santossan2210@gmail.com</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> San Soluções e Negócios. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/global.js"></script>
+  <script src="../js/contato.js"></script>
+</body>
+</html>
