@@ -1,10 +1,10 @@
 /*
   San Soluções e Negócios - CSS do Formulário de Contato (contato.css)
   =====================================================================
-  Estilos do formulário - Aprovado pelo Time Santos
+  Estilos do formulário, validação e feedback visual
 */
 
-/* ===== LAYOUT - INICIAL ===== */
+/* ===== LAYOUT ===== */
 .contato-section { padding: var(--space-xl) 0; }
 
 .contato-grid {
@@ -14,7 +14,7 @@
   align-items: start;
 }
 
-/* ===== CARD DE 1 INFO ===== */
+/* ===== CARD DE INFO ===== */
 .contato-info .info-card {
   background: var(--clr-navy);
   color: var(--clr-white);
@@ -94,7 +94,7 @@ a.info-value:hover { color: var(--clr-gold); }
   border-color: #d97706 !important;
 }
 
-/* ===== FORMULÁRIO 1 ===== */
+/* ===== FORMULÁRIO ===== */
 .contato-form-wrap h2 {
   font-family: var(--ff-display);
   font-size: clamp(1.5rem, 3vw, 2rem);
@@ -202,7 +202,7 @@ a.info-value:hover { color: var(--clr-gold); }
 .char-count.limit-near { color: #D97706; }
 .char-count.limit-reached { color: #DC2626; }
 
-/* Mensagem importante de erro por campo */
+/* Mensagem de erro por campo */
 .form-error {
   font-size: 0.8rem;
   color: #DC2626;
@@ -226,14 +226,14 @@ a.info-value:hover { color: var(--clr-gold); }
 }
 
 .checkbox-input {
-  /* Esconde o input */
+  /* Esconde o input nativo mas mantém acessível */
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Checkbox visual */
+/* Checkbox visual customizado */
 .checkbox-custom {
   flex-shrink: 0;
   width: 18px;
@@ -248,7 +248,7 @@ a.info-value:hover { color: var(--clr-gold); }
   transition: border-color var(--transition), background var(--transition);
 }
 
-/* Estado checked */
+/* Estado checked via irmão */
 .checkbox-input:checked + .checkbox-custom {
   background: var(--clr-blue);
   border-color: var(--clr-blue);

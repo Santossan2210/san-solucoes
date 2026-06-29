@@ -4,7 +4,6 @@
   Conceitos aplicados: CSS Custom Properties (variáveis),
   Flexbox, Grid, responsividade com media queries,
   acessibilidade (foco visível, reduced-motion)
-  Material Design (botões, cards, sombras, transições)
 */
 
 /* ===== 1. RESET E VARIÁVEIS ===== */
@@ -190,6 +189,35 @@ ul { list-style: none; }
   transition: color var(--transition);
 }
 .site-header.scrolled .navbar-logo { color: var(--clr-navy); }
+
+/* Imagem de logo (arquivo da pasta /image) */
+.logo-img {
+  height: 44px;       /* altura do logo na navbar */
+  width: auto;        /* largura proporcional automática */
+  object-fit: contain;
+  display: block;
+  /* Logo branco no header transparente — use filter para inverter se precisar */
+  /* filter: brightness(0) invert(1); /* torna o logo branco sobre fundo escuro */
+  transition: filter var(--transition);
+}
+
+/* Quando o header fica branco, remove o filtro de inversão */
+.site-header.scrolled .logo-img {
+  filter: none;
+}
+
+/* Logo no rodapé — sem filtro (fundo escuro, logo em cor natural ou branco) */
+.logo-img--footer {
+  height: 40px;
+ /* filter: brightness(0) invert(1); /* logo branco no rodapé escuro */
+}
+
+/* Span de fallback (texto) — só aparece se a imagem falhar */
+.logo-fallback {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
 
 .logo-icon {
   display: flex;

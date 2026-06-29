@@ -16,10 +16,6 @@
  *  - Mensagem de erro embaixo de cada campo
  *  - Contador de caracteres no textarea
  *  - Mensagem global de sucesso/erro após envio
- * Possibilide de expansão futura: integração com backend via fetch() para envio real do formulário.
- *
- * Autor: Antonio Santos
- * Data: 2024-06-15
  */
 
 document.addEventListener('DOMContentLoaded', () => {

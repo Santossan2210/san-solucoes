@@ -26,8 +26,12 @@
   <header class="site-header scrolled" id="site-header">
     <nav class="navbar container" role="navigation" aria-label="Navegação principal">
       <a class="navbar-logo" href="../index.html" aria-label="San Soluções e Negócios - Início">
-        <span class="logo-icon">S</span>
-        <span class="logo-text">San <strong>Soluções</strong></span>
+        <img src="../image/logo" alt="San Soluções e Negócios" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <span class="logo-fallback" style="display:none">
+          <span class="logo-icon">S</span>
+          <span class="logo-text">San <strong>Soluções</strong></span>
+        </span>
       </a>
       <ul class="nav-links" id="nav-links" role="list">
         <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -43,8 +47,9 @@
   </header>
 
   <main>
-    <!-- HERO INTERNO -->
-    <section class="page-hero" aria-label="Sobre Nós">
+    <!-- HERO INTERNO com banner-2 como fundo -->
+    <section class="page-hero page-hero--banner" aria-label="Sobre Nós" style="background-image: url('../image/banner-2'); background-size: cover; background-position: center;">
+      <div class="page-hero-overlay"></div>
       <div class="container">
         <div class="page-hero-content">
           <span class="section-eyebrow">Quem Somos</span>
@@ -102,10 +107,16 @@
         </div>
 
         <div class="equipe-grid">
+
           <!-- Membro 1 - CEO -->
           <article class="membro-card" data-reveal>
-            <div class="membro-foto membro-foto--ceo" aria-label="Foto de Santos, CEO">
-              <span class="membro-inicial">S</span>
+            <div class="membro-foto membro-foto--img">
+              <img
+                src="../image/santos-foto"
+                alt="Santos — CEO e Consultor Estratégico"
+                class="membro-img"
+                onerror="this.style.display='none'; this.parentElement.classList.add('membro-foto--fallback'); this.parentElement.innerHTML += '<span class=\'membro-inicial\'>S</span>'"
+              >
             </div>
             <div class="membro-info">
               <h3>Santos</h3>
@@ -114,41 +125,57 @@
             </div>
           </article>
 
-          <!-- Membros 2 -  Vice-presidente de Clientes  -->
-          <article class="membro-card membro-card--placeholder" data-reveal>
-            <div class="membro-foto" aria-hidden="true">
-              <span class="membro-inicial">?</span>
+          <!-- Membro 2 - VP Clientes -->
+          <article class="membro-card" data-reveal>
+            <div class="membro-foto membro-foto--img">
+              <img
+                src="../image/luciana-foto"
+                alt="Luciana Santos — Vice-presidente de Clientes"
+                class="membro-img"
+                onerror="this.style.display='none'; this.parentElement.classList.add('membro-foto--fallback'); this.parentElement.innerHTML += '<span class=\'membro-inicial\'>L</span>'"
+              >
             </div>
             <div class="membro-info">
-              <h3>Luciana Santos </h3>
+              <h3>Luciana Santos</h3>
               <span class="membro-cargo">Vice-presidente de Clientes</span>
-              <p>Sólida experiência em atendimento, vendas e negociação em diversos setores, com foco na excelência e nos resultados.</p>
+              <p>Especialista em relacionamento com clientes e experiência do consumidor, com trajetória consolidada em gestão de contas estratégicas e fidelização.</p>
             </div>
           </article>
 
-          <!-- Membros 3 -  Vice-presidente Financeiro  -->
-          <article class="membro-card membro-card--placeholder" data-reveal>
-            <div class="membro-foto" aria-hidden="true">
-              <span class="membro-inicial">?</span>
+          <!-- Membro 3 - VP Financeira -->
+          <article class="membro-card" data-reveal>
+            <div class="membro-foto membro-foto--img">
+              <img
+                src="../image/jack-foto"
+                alt="Jacqueline Fonseca — Vice-presidente Financeira"
+                class="membro-img"
+                onerror="this.style.display='none'; this.parentElement.classList.add('membro-foto--fallback'); this.parentElement.innerHTML += '<span class=\'membro-inicial\'>J</span>'"
+              >
             </div>
             <div class="membro-info">
-              <h3>Jacqueline Fonseca </h3>
-              <span class="membro-cargo">Vice-presidente Financeiro</span>
-              <p>Experiência sólida em contratos, logística, faturamento e receitas, garantindo eficiência e resultados consistentes para a empresa.</p>
+              <h3>Jacqueline Fonseca</h3>
+              <span class="membro-cargo">Vice-presidente Financeira</span>
+              <p>Ampla experiência em controladoria, planejamento financeiro e compliance, garantindo solidez e transparência nas operações da empresa.</p>
             </div>
           </article>
 
-          <!-- Membros 4 -  Diretoria de Compras e Marketing   -->
-          <article class="membro-card membro-card--placeholder" data-reveal>
-            <div class="membro-foto" aria-hidden="true">
-              <span class="membro-inicial">?</span>
+          <!-- Membro 4 - Diretoria Compras e Marketing -->
+          <article class="membro-card" data-reveal>
+            <div class="membro-foto membro-foto--img">
+              <img
+                src="../image/isaac-foto"
+                alt="Isaac Belo — Diretoria de Compras e Marketing"
+                class="membro-img"
+                onerror="this.style.display='none'; this.parentElement.classList.add('membro-foto--fallback'); this.parentElement.innerHTML += '<span class=\'membro-inicial\'>I</span>'"
+              >
             </div>
             <div class="membro-info">
-              <h3>Isaac Belo </h3>
-              <span class="membro-cargo">Diretor de Compras e Marketing</span>
-              <p>Experiência sólida em gestão de compras e estratégias de marketing, contribuindo para o crescimento e a competitividade da empresa.</p>
+              <h3>Isaac Belo</h3>
+              <span class="membro-cargo">Diretoria de Compras e Marketing</span>
+              <p>Profissional com expertise em estratégias de aquisição, negociação e posicionamento de marca, conectando oportunidades de mercado aos objetivos da empresa.</p>
             </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -201,8 +228,12 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="navbar-logo" href="../index.html">
-            <span class="logo-icon">S</span>
-            <span class="logo-text">San <strong>Soluções</strong></span>
+            <img src="../image/logo" alt="San Soluções e Negócios" class="logo-img logo-img--footer"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback" style="display:none">
+              <span class="logo-icon">S</span>
+              <span class="logo-text">San <strong>Soluções</strong></span>
+            </span>
           </a>
           <p>Transformar desafios em oportunidades é o que nos move.</p>
         </div>

@@ -2,7 +2,6 @@
   San Soluções e Negócios - CSS das Páginas Internas (pages.css)
   ================================================================
   Estilos compartilhados entre sobre.html, servicos.html e contato.html
-  possibilidades de melhoria: implementação de novos estilos para páginas internas, animações, interações, etc.
 */
 
 /* ===== HERO INTERNO ===== */
@@ -12,6 +11,26 @@
   background: linear-gradient(135deg, #071528 0%, #0B1F3A 60%, #132B50 100%);
   color: var(--clr-white);
   text-align: center;
+  position: relative; /* necessário para o overlay da imagem de fundo */
+}
+
+/* Quando usa banner-2 como fundo, adiciona overlay escuro para legibilidade */
+.page-hero--banner {
+  background-color: var(--clr-navy); /* fallback se a imagem não carregar */
+}
+
+/* Overlay escuro semitransparente sobre o banner */
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(7,21,40,0.78) 0%, rgba(11,31,58,0.72) 100%);
+  z-index: 0;
+}
+
+/* Garante que o conteúdo fique acima do overlay */
+.page-hero--banner .container {
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero-title {
@@ -121,19 +140,36 @@
 
 .membro-foto {
   background: linear-gradient(135deg, var(--clr-blue), #1648c0);
-  height: 160px;
+  height: 260px; /* altura aumentada para fotos reais */
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* corta a imagem nos cantos arredondados */
 }
 
-.membro-foto--ceo {
-  background: linear-gradient(135deg, #0B1F3A, var(--clr-blue));
+/* Foto real (com <img>) — ocupa todo o espaço do card */
+.membro-foto--img {
+  background: var(--clr-gray-1);
+  padding: 0;
 }
 
-.membro-card--placeholder .membro-foto {
-  background: linear-gradient(135deg, #94A3B8, #64748B);
-  opacity: 0.6;
+/* A tag <img> dentro do card de membro */
+.membro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* mantém proporção e cobre a área */
+  object-position: top;    /* foca na parte superior (rosto) */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.membro-card:hover .membro-img {
+  transform: scale(1.04); /* leve zoom ao passar o mouse */
+}
+
+/* Fallback visual (letra inicial) quando a imagem não carrega */
+.membro-foto--fallback {
+  background: linear-gradient(135deg, #0B1F3A, var(--clr-blue)) !important;
 }
 
 .membro-inicial {

@@ -27,8 +27,12 @@
   <header class="site-header scrolled" id="site-header">
     <nav class="navbar container" role="navigation" aria-label="Navegação principal">
       <a class="navbar-logo" href="../index.html" aria-label="San Soluções e Negócios - Início">
-        <span class="logo-icon">S</span>
-        <span class="logo-text">San <strong>Soluções</strong></span>
+        <img src="../image/logo" alt="San Soluções e Negócios" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <span class="logo-fallback" style="display:none">
+          <span class="logo-icon">S</span>
+          <span class="logo-text">San <strong>Soluções</strong></span>
+        </span>
       </a>
       <ul class="nav-links" id="nav-links" role="list">
         <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -255,8 +259,12 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="navbar-logo" href="../index.html">
-            <span class="logo-icon">S</span>
-            <span class="logo-text">San <strong>Soluções</strong></span>
+            <img src="../image/logo" alt="San Soluções e Negócios" class="logo-img logo-img--footer"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <span class="logo-fallback" style="display:none">
+              <span class="logo-icon">S</span>
+              <span class="logo-text">San <strong>Soluções</strong></span>
+            </span>
           </a>
           <p>Transformar desafios em oportunidades é o que nos move.</p>
         </div>

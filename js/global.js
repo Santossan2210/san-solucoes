@@ -5,11 +5,7 @@
  *   1) Header dinâmico (scroll → fundo branco)
  *   2) Reveal de elementos ao entrar na viewport (Intersection Observer)
  *
- * Inclui: menu mobile, ano do rodapé
- * Possibilidades de melhoria durante o desenvolvimento.
- *
- * Autor: Antonio Santos
- * Data: 2024-06-14
+ * Inclui: menu mobile, ano do rodapé - Necessario executar textes de funcionalidade apos rodar no ambiente produção
  */
 
 document.addEventListener('DOMContentLoaded', () => {
