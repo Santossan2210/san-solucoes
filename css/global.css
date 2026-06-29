@@ -197,7 +197,7 @@ ul { list-style: none; }
   object-fit: contain;
   display: block;
   /* Logo branco no header transparente — use filter para inverter se precisar */
-  /* filter: brightness(0) invert(1); /* torna o logo branco sobre fundo escuro */
+  /* filter: brightness(0) invert(1); /* torna o logo branco sobre fundo escuro - Desativado devido a mudança de logo */
   transition: filter var(--transition);
 }
 

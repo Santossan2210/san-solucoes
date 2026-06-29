@@ -14,7 +14,7 @@
   align-items: start;
 }
 
-/* ===== CARD DE INFO ===== */
+/* ===== CARD DE INFOMAÇÃO ===== */
 .contato-info .info-card {
   background: var(--clr-navy);
   color: var(--clr-white);
@@ -211,7 +211,7 @@ a.info-value:hover { color: var(--clr-gold); }
   display: block;
 }
 
-/* ===== CHECKBOX LGPD ===== */
+/* ===== CHECKBOX LGPD - VALORIZAR O TRABALHO ===== */
 .form-group--checkbox { gap: 0; }
 
 .checkbox-label {

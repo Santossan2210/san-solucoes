@@ -4,8 +4,7 @@
  * Efeitos interativos 1 e 2:
  *   1) Header dinâmico (scroll → fundo branco)
  *   2) Reveal de elementos ao entrar na viewport (Intersection Observer)
- *
- * Inclui: menu mobile, ano do rodapé - Necessario executar textes de funcionalidade apos rodar no ambiente produção
+ *  Inclui: menu mobile, ano do rodapé
  */
 
 document.addEventListener('DOMContentLoaded', () => {
