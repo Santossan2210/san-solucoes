@@ -191,7 +191,8 @@ ul { list-style: none; }
 }
 .site-header.scrolled .navbar-logo { color: var(--clr-navy); }
 
-/* Imagem de logo (arquivo da pasta /image) */
+/* Imagem de logo (arquivo da pasta /image). Sempre que alterar a configuração da logo, alterar este campo */   
+
 .logo-img {
   height: 120px;       /* altura do logo na navbar alterado para adequação */
   width: auto;        /* largura proporcional automática */
@@ -209,7 +210,7 @@ ul { list-style: none; }
 
 /* Logo no rodapé — sem filtro (fundo escuro, logo em cor natural ou branco) */
 .logo-img--footer {
-  height: 40px;
+  height: 100px;
  /* filter: brightness(0) invert(1); /* logo branco no rodapé escuro */
 }
 
