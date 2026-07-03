@@ -4,6 +4,7 @@
   Conceitos aplicados: CSS Custom Properties (variáveis),
   Flexbox, Grid, responsividade com media queries,
   acessibilidade (foco visível, reduced-motion)
+  Proximo passo será aplicar a fonte do design da SAN Soluções e Negócios (Montserrat e Playfair Display) e atualizar a paleta de cores para incorporar as cores do design da SAN Soluções e Negócios
 */
 
 /* ===== 1. RESET E VARIÁVEIS ===== */
@@ -192,12 +193,12 @@ ul { list-style: none; }
 
 /* Imagem de logo (arquivo da pasta /image) */
 .logo-img {
-  height: 44px;       /* altura do logo na navbar */
+  height: 120px;       /* altura do logo na navbar alterado para adequação */
   width: auto;        /* largura proporcional automática */
   object-fit: contain;
   display: block;
-  /* Logo branco no header transparente — use filter para inverter se precisar */
-  /* filter: brightness(0) invert(1); /* torna o logo branco sobre fundo escuro - Desativado devido a mudança de logo */
+  /* Logo branco e cinza no header transparente  */
+  filter: brightness(0) invert(1); /* torna o logo branco sobre fundo escuro - Reativado para adequar a novo logo */
   transition: filter var(--transition);
 }
 
